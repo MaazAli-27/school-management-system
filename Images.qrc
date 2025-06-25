@@ -1,0 +1,8 @@
+<RCC>
+    <qresource prefix="/background">
+        <file>D:/Users/Dell/Downloads/login page.jpeg</file>
+        <file>D:/Users/Dell/Downloads/admin page.jpeg</file>
+        <file>D:/Users/Dell/Downloads/student page.jpeg</file>
+        <file>D:/Users/Dell/Downloads/teacher page.jpeg</file>
+    </qresource>
+</RCC>
