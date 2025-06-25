@@ -1,0 +1,349 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>TeacherManagement</class>
+ <widget class="QDialog" name="TeacherManagement">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>621</width>
+    <height>612</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Manage Teachers</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">QDialog#TeacherManagement {
+        background-color:#1B0633;
+border:5px solid #B89AD8;
+        border-radius: 10%;
+}</string>
+  </property>
+  <widget class="QTableWidget" name="teacherTable">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>210</y>
+     <width>601</width>
+     <height>391</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QTableWidget#teacherTable {
+      border: 1.5px solid #b0b0b0;  /* Softer grey border */
+    border-radius: 10px;
+    background-color: #d4d4d4;    /* Lighter table background */
+    font-family: 'Segoe UI', sans-serif;
+    font-size: 11pt;
+    color: #1f1f1f;
+    gridline-color: #bcbcbc;      /* Mid grey grid lines */
+    alternate-background-color: #e2e2e2;  /* Subtle row alternation */
+    selection-background-color: #b0b0b0;  /* Visible selection */
+    selection-color: #000000;
+    font-weight: 500;
+}
+
+QHeaderView::section {
+    background-color: #4b4b4b;    /* Darker grey header */
+    color: #ffffff;               /* Light font for contrast */
+    font-weight: bold;
+    font-size: 11pt;
+    padding: 6px;
+    border: none;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+QTableWidget QTableCornerButton::section {
+   background-color: #8a8a8a;    /* Match header color */
+    border: none;
+}
+
+QTableWidget::item {
+      padding: 8px 10px;
+    font-size: 10pt;
+    color: #1f1f1f;
+    background-color: transparent;
+}
+
+QTableWidget::item:selected {
+    background-color: #b0b0b0;
+    color: #000000;
+}
+</string>
+   </property>
+   <property name="columnCount">
+    <number>3</number>
+   </property>
+   <property name="horizontalHeaderLabels" stdset="0">
+    <stringlist>
+     <string>ID</string>
+     <string>Name</string>
+     <string>Subject</string>
+    </stringlist>
+   </property>
+   <column/>
+   <column/>
+   <column/>
+  </widget>
+  <widget class="QLabel" name="labelSubject">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>170</y>
+     <width>71</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QLabel#labelSubject {
+        font-size: 20px;
+        color: #E8D4F4 ;
+font-weight:700;
+}</string>
+   </property>
+   <property name="text">
+    <string>Subject</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="labelName">
+   <property name="geometry">
+    <rect>
+     <x>20</x>
+     <y>130</y>
+     <width>71</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QLabel#labelName {
+        font-size: 20px;
+        color: #E8D4F4 ;
+font-weight:700;
+}</string>
+   </property>
+   <property name="text">
+    <string>Name</string>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="subjectLineEdit">
+   <property name="geometry">
+    <rect>
+     <x>90</x>
+     <y>170</y>
+     <width>521</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QLineEdit#subjectLineEdit {
+    color:#1B0633;
+    border: 3px solid #8d4d95;
+    border-radius: 10px;
+        font-size: 17px;
+font-weight: 570;
+padding: 0px 8px 0px 8px;
+background-color: #E8D4F4 ;
+
+}
+</string>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+   <property name="placeholderText">
+    <string>🔍Search by subject...</string>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="nameLineEdit">
+   <property name="geometry">
+    <rect>
+     <x>90</x>
+     <y>130</y>
+     <width>521</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QLineEdit#nameLineEdit {
+     color:#1B0633;
+    border: 3px solid #8d4d95;
+    border-radius: 10px;
+        font-size: 17px;
+font-weight: 570;
+padding: 0px 8px 0px 8px;
+background-color: #E8D4F4 ;
+}
+</string>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+   <property name="placeholderText">
+    <string>🔍Search by Name...</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="editTeacherButton">
+   <property name="geometry">
+    <rect>
+     <x>170</x>
+     <y>80</y>
+     <width>141</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QPushButton#editTeacherButton {
+   border: 1.5px solid #B89FD0;
+    border-radius: 10px;
+    padding: 6px;
+    font-size: 16px;
+background: qlineargradient(x1:0, y1:0, x2:1, y2:1,
+                            stop:0 rgb(95, 2, 95),
+                            stop:1 rgb(216, 181, 221));
+color:#e4c9f2;
+font-weight:700;
+}
+
+QPushButton#editTeacherButton:hover {
+
+   background-color: #69166f;
+}
+
+</string>
+   </property>
+   <property name="text">
+    <string>Edit Teacher</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="viewTeacherButton">
+   <property name="enabled">
+    <bool>true</bool>
+   </property>
+   <property name="geometry">
+    <rect>
+     <x>470</x>
+     <y>80</y>
+     <width>141</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QPushButton#viewTeacherButton {
+     border: 1.5px solid #B89FD0;
+    border-radius: 10px;
+    padding: 6px;
+    font-size: 16px;
+background: qlineargradient(x1:0, y1:0, x2:1, y2:1,
+                            stop:0 rgb(95, 2, 95),
+                            stop:1 rgb(216, 181, 221));
+color:#e4c9f2;
+font-weight:700;
+}
+
+QPushButton#viewTeacherButton:hover {
+
+   background-color: #69166f;
+}
+
+</string>
+   </property>
+   <property name="text">
+    <string>View Teacher</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="removeTeacherButton">
+   <property name="geometry">
+    <rect>
+     <x>320</x>
+     <y>80</y>
+     <width>141</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QPushButton#removeTeacherButton {
+  border: 1.5px solid #B89FD0;
+    border-radius: 10px;
+    padding: 6px;
+    font-size: 16px;
+background: qlineargradient(x1:0, y1:0, x2:1, y2:1,
+                            stop:0 rgb(95, 2, 95),
+                            stop:1 rgb(216, 181, 221));
+color:#e4c9f2;
+font-weight:700;
+}
+
+QPushButton#removeTeacherButton:hover {
+
+
+   background-color: #69166f;
+}
+
+</string>
+   </property>
+   <property name="text">
+    <string>Remove Teacher</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="addTeacherButton">
+   <property name="geometry">
+    <rect>
+     <x>20</x>
+     <y>80</y>
+     <width>141</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QPushButton#addTeacherButton {
+    border: 1.5px solid #B89FD0;
+    border-radius: 10px;
+    padding: 6px;
+    font-size: 16px;
+background: qlineargradient(x1:0, y1:0, x2:1, y2:1,
+                            stop:0 rgb(95, 2, 95),
+                            stop:1 rgb(216, 181, 221));
+color:#e4c9f2;
+font-weight:700;
+}
+
+QPushButton#addTeacherButton:hover {
+
+   background-color: #69166f;
+}
+
+</string>
+   </property>
+   <property name="text">
+    <string>Add Teacher</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label">
+   <property name="geometry">
+    <rect>
+     <x>180</x>
+     <y>10</y>
+     <width>251</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QLabel#label {
+  background-color: #3E0066;
+  color: #E6CCE7;
+  border: 2px solid #E7A9A9;
+  font-weight: bold;
+  font-size: 20px;
+  text-align: center;
+
+}</string>
+   </property>
+   <property name="text">
+    <string>TEACHER MANAGMENT</string>
+   </property>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

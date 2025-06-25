@@ -1,0 +1,315 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>StudentManagement</class>
+ <widget class="QDialog" name="StudentManagement">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>612</width>
+    <height>640</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Manage Students</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">QDialog#StudentManagement {
+        background-color:#1B0633;
+border:5px solid #B89AD8;
+        border-radius: 10%;
+}</string>
+  </property>
+  <widget class="QTableWidget" name="studentTable">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>200</y>
+     <width>591</width>
+     <height>421</height>
+    </rect>
+   </property>
+   <property name="maximumSize">
+    <size>
+     <width>1000</width>
+     <height>600</height>
+    </size>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QTableWidget#studentTable {
+  border: 1.5px solid #b0b0b0;  /* Softer grey border */
+    border-radius: 10px;
+    background-color: #d4d4d4;    /* Lighter table background */
+    font-family: 'Segoe UI', sans-serif;
+    font-size: 11pt;
+    color: #1f1f1f;
+    gridline-color: #bcbcbc;      /* Mid grey grid lines */
+    alternate-background-color: #e2e2e2;  /* Subtle row alternation */
+    selection-background-color: #b0b0b0;  /* Visible selection */
+    selection-color: #000000;
+    font-weight: 500;
+}
+
+QHeaderView::section {
+    background-color: #4b4b4b;    /* Darker grey header */
+    color: #ffffff;               /* Light font for contrast */
+    font-weight: bold;
+    font-size: 11pt;
+    padding: 6px;
+    border: none;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+QTableWidget QTableCornerButton::section {
+   background-color: #8a8a8a;    /* Match header color */
+    border: none;
+}
+
+QTableWidget::item {
+      padding: 8px 10px;
+    font-size: 10pt;
+    color: #1f1f1f;
+    background-color: transparent;
+}
+
+QTableWidget::item:selected {
+    background-color: #b0b0b0;
+    color: #000000;
+}
+</string>
+   </property>
+   <property name="showGrid">
+    <bool>true</bool>
+   </property>
+   <property name="columnCount">
+    <number>3</number>
+   </property>
+   <property name="horizontalHeaderLabels" stdset="0">
+    <stringlist>
+     <string>ID</string>
+     <string>Name</string>
+     <string>Class</string>
+    </stringlist>
+   </property>
+   <column/>
+   <column/>
+   <column/>
+  </widget>
+  <widget class="QLineEdit" name="nameLineEdit">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>160</y>
+     <width>261</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QLineEdit#nameLineEdit {
+    color:#1B0633;
+    border: 3px solid #8d4d95;
+    border-radius: 10px;
+        font-size: 17px;
+font-weight: 570;
+padding: 0px 8px 0px 8px;
+background-color: #E8D4F4 ;
+}
+</string>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+   <property name="placeholderText">
+    <string>🔍Search by Student Class...</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="viewStudentButton">
+   <property name="enabled">
+    <bool>true</bool>
+   </property>
+   <property name="geometry">
+    <rect>
+     <x>460</x>
+     <y>70</y>
+     <width>141</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QPushButton#viewStudentButton {
+ border: 1.5px solid #B89FD0;
+    border-radius: 10px;
+    padding: 6px;
+    font-size: 16px;
+background: qlineargradient(x1:0, y1:0, x2:1, y2:1,
+                            stop:0 rgb(95, 2, 95),
+                            stop:1 rgb(216, 181, 221));
+color:#e4c9f2;
+font-weight:700;
+}
+
+QPushButton#viewStudentButton:hover {
+background-color: #69166f;
+}
+
+</string>
+   </property>
+   <property name="text">
+    <string>View Students</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="removeStudentButton">
+   <property name="geometry">
+    <rect>
+     <x>310</x>
+     <y>70</y>
+     <width>141</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QPushButton#removeStudentButton {
+     border: 1.5px solid #B89FD0;
+    border-radius: 10px;
+    padding: 6px;
+    font-size: 16px;
+background: qlineargradient(x1:0, y1:0, x2:1, y2:1,
+                            stop:0 rgb(95, 2, 95),
+                            stop:1 rgb(216, 181, 221));
+color:#e4c9f2;
+font-weight:700;
+}
+
+QPushButton#removeStudentButton:hover {
+background-color: #69166f;
+}
+
+</string>
+   </property>
+   <property name="text">
+    <string>Remove Student</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="editStudentButton">
+   <property name="geometry">
+    <rect>
+     <x>160</x>
+     <y>70</y>
+     <width>141</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QPushButton#editStudentButton {
+ border: 1.5px solid #B89FD0;
+    border-radius: 10px;
+    padding: 6px;
+    font-size: 16px;
+background: qlineargradient(x1:0, y1:0, x2:1, y2:1,
+                            stop:0 rgb(95, 2, 95),
+                            stop:1 rgb(216, 181, 221));
+color:#e4c9f2;
+font-weight:700;
+   
+}
+
+QPushButton#editStudentButton:hover {
+
+   background-color: #69166f;
+       
+}
+
+</string>
+   </property>
+   <property name="text">
+    <string>Edit Student</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="addStudentButton">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>70</y>
+     <width>141</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QPushButton#addStudentButton {
+     border: 1.5px solid #B89FD0;
+    border-radius: 10px;
+    padding: 6px;
+    font-size: 16px;
+background: qlineargradient(x1:0, y1:0, x2:1, y2:1,
+                            stop:0 rgb(95, 2, 95),
+                            stop:1 rgb(216, 181, 221));
+color:#e4c9f2;
+font-weight:700;
+
+}
+
+QPushButton#addStudentButton:hover {
+    background-color: #69166f;
+}
+
+</string>
+   </property>
+   <property name="text">
+    <string>Add Student</string>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="classLineEdit">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>120</y>
+     <width>261</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QLineEdit#classLineEdit{
+     color:#1B0633;
+    border: 3px solid #8d4d95;
+    border-radius: 10px;
+        font-size: 17px;
+font-weight: 570;
+padding: 0px 8px 0px 8px;
+background-color: #E8D4F4 ;
+}</string>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+   <property name="placeholderText">
+    <string>🔍Search by Student Name...</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label">
+   <property name="geometry">
+    <rect>
+     <x>180</x>
+     <y>10</y>
+     <width>251</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QLabel#label{
+  background-color: #3E0066;
+  color: #E6CCE7;
+  border: 2px solid #E7A9A9;
+  font-weight: bold;
+  font-size: 20px;
+  text-align: center;
+
+}</string>
+   </property>
+   <property name="text">
+    <string>STUDENT MANAGMENT</string>
+   </property>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

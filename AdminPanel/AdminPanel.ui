@@ -1,0 +1,247 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>AdminPanel</class>
+ <widget class="QDialog" name="AdminPanel">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>675</width>
+    <height>380</height>
+   </rect>
+  </property>
+  <property name="maximumSize">
+   <size>
+    <width>2000</width>
+    <height>1000</height>
+   </size>
+  </property>
+  <property name="windowTitle">
+   <string>Admin Panel</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">QDialog#AdminPanel {
+         background-color:#1B0633;
+border:8px solid #B89AD8;
+        border-radius: 10%;
+}</string>
+  </property>
+  <property name="modal">
+   <bool>false</bool>
+  </property>
+  <widget class="QPushButton" name="studentButton">
+   <property name="geometry">
+    <rect>
+     <x>40</x>
+     <y>30</y>
+     <width>250</width>
+     <height>40</height>
+    </rect>
+   </property>
+   <property name="maximumSize">
+    <size>
+     <width>250</width>
+     <height>40</height>
+    </size>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QPushButton#studentButton {
+border: 1.5px solid #B89FD0;
+border-radius: 10px;
+
+font-size: 20px;
+background: qlineargradient(x1:0, y1:0, x2:1, y2:1,
+                            stop:0 rgb(60, 0, 60),     /* darker start */
+                            stop:1 rgb(140, 110, 150)); /* darker end */
+color: #e4c9f2;
+font-weight: 1000;
+
+}
+
+QPushButton#studentButton:hover {
+   background-color: #69166f;
+}
+
+</string>
+   </property>
+   <property name="text">
+    <string>Manage Students</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="teacherButton">
+   <property name="geometry">
+    <rect>
+     <x>40</x>
+     <y>100</y>
+     <width>250</width>
+     <height>40</height>
+    </rect>
+   </property>
+   <property name="maximumSize">
+    <size>
+     <width>250</width>
+     <height>40</height>
+    </size>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QPushButton#teacherButton {
+   border: 1.5px solid #B89FD0;
+border-radius: 10px;
+
+font-size: 20px;
+background: qlineargradient(x1:0, y1:0, x2:1, y2:1,
+                            stop:0 rgb(60, 0, 60),     /* darker start */
+                            stop:1 rgb(140, 110, 150)); /* darker end */
+color: #e4c9f2;
+font-weight: 1000;
+}
+
+QPushButton#teacherButton:hover {
+    background-color: #69166f;
+}
+
+</string>
+   </property>
+   <property name="text">
+    <string>Manage Teachers</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="attendanceButton">
+   <property name="geometry">
+    <rect>
+     <x>40</x>
+     <y>170</y>
+     <width>250</width>
+     <height>40</height>
+    </rect>
+   </property>
+   <property name="maximumSize">
+    <size>
+     <width>250</width>
+     <height>40</height>
+    </size>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QPushButton#attendanceButton {
+   border: 1.5px solid #B89FD0;
+border-radius: 10px;
+
+font-size: 20px;
+background: qlineargradient(x1:0, y1:0, x2:1, y2:1,
+                            stop:0 rgb(60, 0, 60),     /* darker start */
+                            stop:1 rgb(140, 110, 150)); /* darker end */
+color: #e4c9f2;
+font-weight: 1000;
+}
+
+QPushButton#attendanceButton:hover {
+    background-color: #69166f;
+}
+
+</string>
+   </property>
+   <property name="text">
+    <string>Manage Attendance</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="examButton">
+   <property name="geometry">
+    <rect>
+     <x>40</x>
+     <y>240</y>
+     <width>250</width>
+     <height>40</height>
+    </rect>
+   </property>
+   <property name="maximumSize">
+    <size>
+     <width>250</width>
+     <height>40</height>
+    </size>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QPushButton#examButton {
+   border: 1.5px solid #B89FD0;
+border-radius: 10px;
+
+font-size: 20px;
+background: qlineargradient(x1:0, y1:0, x2:1, y2:1,
+                            stop:0 rgb(60, 0, 60),     /* darker start */
+                            stop:1 rgb(140, 110, 150)); /* darker end */
+color: #e4c9f2;
+font-weight: 1000;
+}
+
+QPushButton#examButton:hover {
+   background-color: #69166f;
+}
+
+</string>
+   </property>
+   <property name="text">
+    <string>Manage Exams</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="classScheduleButton">
+   <property name="geometry">
+    <rect>
+     <x>40</x>
+     <y>310</y>
+     <width>250</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="maximumSize">
+    <size>
+     <width>250</width>
+     <height>42</height>
+    </size>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QPushButton#classScheduleButton {
+   border: 1.5px solid #B89FD0;
+border-radius: 10px;
+
+font-size: 20px;
+background: qlineargradient(x1:0, y1:0, x2:1, y2:1,
+                            stop:0 rgb(60, 0, 60),     /* darker start */
+                            stop:1 rgb(140, 110, 150)); /* darker end */
+color: #e4c9f2;
+font-weight: 1000;
+}
+
+QPushButton#classScheduleButton:hover {
+    background-color: #69166f;
+}
+
+</string>
+   </property>
+   <property name="text">
+    <string>Manage Class Schedules</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label">
+   <property name="geometry">
+    <rect>
+     <x>340</x>
+     <y>0</y>
+     <width>511</width>
+     <height>381</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QLabel#label{
+
+}</string>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+   <property name="pixmap">
+    <pixmap>D:/Users/Dell/Downloads/admin page.jpeg</pixmap>
+   </property>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

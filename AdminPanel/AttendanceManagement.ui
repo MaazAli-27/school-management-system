@@ -1,0 +1,245 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>AttendanceManagement</class>
+ <widget class="QWidget" name="AttendanceManagement">
+  <property name="enabled">
+   <bool>true</bool>
+  </property>
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>550</width>
+    <height>543</height>
+   </rect>
+  </property>
+  <property name="sizePolicy">
+   <sizepolicy hsizetype="Fixed" vsizetype="Preferred">
+    <horstretch>0</horstretch>
+    <verstretch>0</verstretch>
+   </sizepolicy>
+  </property>
+  <property name="mouseTracking">
+   <bool>false</bool>
+  </property>
+  <property name="windowTitle">
+   <string>Attendance Management</string>
+  </property>
+  <property name="layoutDirection">
+   <enum>Qt::LayoutDirection::LeftToRight</enum>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">QWidget#AttendanceManagement {
+         background-color:#1B0633;
+border:5px solid #B89AD8;
+        border-radius: 10%;
+}</string>
+  </property>
+  <widget class="QLineEdit" name="searchBar">
+   <property name="geometry">
+    <rect>
+     <x>20</x>
+     <y>80</y>
+     <width>241</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QLineEdit#searchBar {
+    color:#1B0633;
+    border: 3px solid #8d4d95;
+    border-radius: 10px;
+        font-size: 17px;
+font-weight: 570;
+padding: 0px 8px 0px 8px;
+background-color: #E8D4F4 ;
+}
+</string>
+   </property>
+   <property name="inputMask">
+    <string/>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+   <property name="placeholderText">
+    <string>🔍Search by ID or Name...</string>
+   </property>
+  </widget>
+  <widget class="QTableView" name="attendanceTable">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>180</y>
+     <width>531</width>
+     <height>351</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QTableView#attendanceTable {
+    border: 1.5px solid #b0b0b0;  /* Softer grey border */
+    border-radius: 10px;
+    background-color: #d4d4d4;    /* Lighter table background */
+    font-family: 'Segoe UI', sans-serif;
+    font-size: 11pt;
+    color: #1f1f1f;
+    gridline-color: #bcbcbc;      /* Mid grey grid lines */
+    alternate-background-color: #e2e2e2;  /* Subtle row alternation */
+    selection-background-color: #b0b0b0;  /* Visible selection */
+    selection-color: #000000;
+    font-weight: 500;
+}
+
+QHeaderView::section {
+    background-color: #4b4b4b;    /* Darker grey header */
+    color: #ffffff;               /* Light font for contrast */
+    font-weight: bold;
+    font-size: 11pt;
+    padding: 6px;
+    border: none;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+QTableView QTableCornerButton::section {
+    background-color: #8a8a8a;    /* Match header color */
+    border: none;
+}
+
+QTableView::item {
+    padding: 8px 10px;
+    font-size: 10pt;
+    color: #1f1f1f;
+    background-color: transparent;
+}
+
+QTableView::item:selected {
+    background-color: #b0b0b0;
+    color: #000000;
+}
+
+
+
+</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="markAttendanceButton">
+   <property name="geometry">
+    <rect>
+     <x>170</x>
+     <y>130</y>
+     <width>201</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QPushButton#markAttendanceButton {
+     border: 1.5px solid #B89FD0;
+border-radius: 10px;
+
+font-size: 20px;
+background: qlineargradient(x1:0, y1:0, x2:1, y2:1,
+                            stop:0 rgb(60, 0, 60),     /* darker start */
+                            stop:1 rgb(140, 110, 150)); /* darker end */
+color: #e4c9f2;
+font-weight: 1000;
+}
+
+QPushButton#markAttendanceButton:hover {
+ background-color: #69166f;
+       
+}
+
+</string>
+   </property>
+   <property name="text">
+    <string>Mark Attendance</string>
+   </property>
+  </widget>
+  <widget class="QComboBox" name="attendanceTypeComboBox">
+   <property name="geometry">
+    <rect>
+     <x>440</x>
+     <y>80</y>
+     <width>91</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QComboBox#attendanceTypeComboBox {
+    border: 2px solid #e4c9f2;
+    border-radius: 6px;
+        padding: 6px;
+    font-size: 12pt;
+    background-color: #1B0633;
+   color: #e4c9f2;
+}
+QComboBox#attendanceTypeComboBox::drop-down {
+    subcontrol-origin: padding;
+    subcontrol-position: top right;
+    width: 22px;
+border-top-right-radius: 6px;
+    border-bottom-right-radius: 6px;
+    background-color: #1B0633;
+    
+}
+</string>
+   </property>
+   <item>
+    <property name="text">
+     <string>Student</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>Teacher</string>
+    </property>
+   </item>
+  </widget>
+  <widget class="QLabel" name="label">
+   <property name="geometry">
+    <rect>
+     <x>320</x>
+     <y>80</y>
+     <width>121</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QLabel#label {
+        font-size: 19px;
+        color: #E8D4F4 ;
+font-weight:700;
+}</string>
+   </property>
+   <property name="text">
+    <string>Select Type:</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_2">
+   <property name="geometry">
+    <rect>
+     <x>130</x>
+     <y>10</y>
+     <width>291</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QLabel#label_2{
+  background-color: #3E0066;
+  color: #E6CCE7;
+  border: 2px solid #E7A9A9;
+  font-weight: bold;
+  font-size: 20px;
+  text-align: center;
+
+}</string>
+   </property>
+   <property name="text">
+    <string>ATTENDENCE MANAGMENT</string>
+   </property>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
