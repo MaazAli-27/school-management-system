@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>StudentAttendance</class>
+ <widget class="QDialog" name="StudentAttendance">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>291</width>
+    <height>432</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>My Attendance</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">QDialog#StudentAttendance {
+        background-color:#1B0633;
+border:5px solid #B89AD8;
+        border-radius: 10%;
+}</string>
+  </property>
+  <widget class="QLabel" name="titleLabel">
+   <property name="geometry">
+    <rect>
+     <x>30</x>
+     <y>10</y>
+     <width>231</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>-1</pointsize>
+     <bold>true</bold>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QLabel#titleLabel {
+      background-color: #3E0066;
+  color: #E6CCE7;
+  border: 2px solid #E7A9A9;
+  font-weight: bold;
+  font-size: 20px;
+  text-align: center;
+
+}</string>
+   </property>
+   <property name="text">
+    <string>ATTENDENCE RECORD</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignmentFlag::AlignCenter</set>
+   </property>
+  </widget>
+  <widget class="QTableWidget" name="tableWidget_2">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>80</y>
+     <width>271</width>
+     <height>341</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QTableWidget#tableWidget_2 {
+   border: 1.5px solid #b0b0b0;  /* Softer grey border */
+    border-radius: 10px;
+    background-color: #d4d4d4;    /* Lighter table background */
+    font-family: 'Segoe UI', sans-serif;
+    font-size: 11pt;
+    color: #1f1f1f;
+    gridline-color: #bcbcbc;      /* Mid grey grid lines */
+    alternate-background-color: #e2e2e2;  /* Subtle row alternation */
+    selection-background-color: #b0b0b0;  /* Visible selection */
+    selection-color: #000000;
+    font-weight: 500;
+}
+
+QHeaderView::section {
+    background-color: #4b4b4b;    /* Darker grey header */
+    color: #ffffff;               /* Light font for contrast */
+    font-weight: bold;
+    font-size: 11pt;
+    padding: 6px;
+    border: none;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+QTableWidget QTableCornerButton::section {
+   background-color: #8a8a8a;    /* Match header color */
+    border: none;
+}
+
+QTableWidget::item {
+      padding: 8px 10px;
+    font-size: 10pt;
+    color: #1f1f1f;
+    background-color: transparent;
+}
+
+QTableWidget::item:selected {
+    background-color: #b0b0b0;
+    color: #000000;
+}
+</string>
+   </property>
+   <column>
+    <property name="text">
+     <string>Date</string>
+    </property>
+   </column>
+   <column>
+    <property name="text">
+     <string>Status</string>
+    </property>
+   </column>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

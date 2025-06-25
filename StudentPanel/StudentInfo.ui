@@ -1,0 +1,281 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>StudentInfo</class>
+ <widget class="QDialog" name="StudentInfo">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>452</width>
+    <height>349</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Student Information</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">QDialog#StudentInfo {
+       background-color:#1B0633;
+border:5px solid #B89AD8;
+        border-radius: 10%;
+}</string>
+  </property>
+  <widget class="QLabel" name="titleLabel">
+   <property name="geometry">
+    <rect>
+     <x>120</x>
+     <y>10</y>
+     <width>211</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>-1</pointsize>
+     <bold>true</bold>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QLabel#titleLabel {
+    background-color: #3E0066;
+  color: #E6CCE7;
+  border: 2px solid #E7A9A9;
+  font-weight: bold;
+  font-size: 20px;
+  text-align: center;
+}</string>
+   </property>
+   <property name="text">
+    <string>STUDENT PROFILE</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignmentFlag::AlignCenter</set>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="btnClose">
+   <property name="geometry">
+    <rect>
+     <x>20</x>
+     <y>290</y>
+     <width>411</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QPushButton#btnClose {
+    border: 1.5px solid #B89FD0;
+    border-radius: 10px;
+    padding: 6px;
+    font-size: 16px;
+background: qlineargradient(x1:0, y1:0, x2:1, y2:1,
+                            stop:0 rgb(95, 2, 95),
+                            stop:1 rgb(216, 181, 221));
+color:#e4c9f2;
+font-weight:700;
+}
+
+/* Hover effect */
+QPushButton#btnClose:hover {
+ 
+   background-color: #69166f;
+}
+
+</string>
+   </property>
+   <property name="text">
+    <string>Close</string>
+   </property>
+   <property name="checkable">
+    <bool>false</bool>
+   </property>
+   <property name="checked">
+    <bool>false</bool>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="lineEditClass">
+   <property name="geometry">
+    <rect>
+     <x>120</x>
+     <y>180</y>
+     <width>311</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QLineEdit#lineEditClass {
+       color:#1B0633;
+    border: 3px solid #8d4d95;
+    border-radius: 10px;
+        font-size: 17px;
+font-weight: 570;
+padding: 0px 8px 0px 8px;
+background-color: #E8D4F4 ;
+}
+</string>
+   </property>
+   <property name="readOnly">
+    <bool>true</bool>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="lineEditName">
+   <property name="geometry">
+    <rect>
+     <x>120</x>
+     <y>130</y>
+     <width>311</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QLineEdit#lineEditName {
+        color:#1B0633;
+    border: 3px solid #8d4d95;
+    border-radius: 10px;
+        font-size: 17px;
+font-weight: 570;
+padding: 0px 8px 0px 8px;
+background-color: #E8D4F4 ;
+}
+</string>
+   </property>
+   <property name="readOnly">
+    <bool>true</bool>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_id">
+   <property name="geometry">
+    <rect>
+     <x>20</x>
+     <y>80</y>
+     <width>111</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QLabel#label_id {
+ font-size: 19px;
+        color: #E8D4F4 ;
+font-weight:700;
+}</string>
+   </property>
+   <property name="text">
+    <string>ID:</string>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="lineEditId">
+   <property name="geometry">
+    <rect>
+     <x>120</x>
+     <y>80</y>
+     <width>311</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QLineEdit#lineEditId {
+     color:#1B0633;
+    border: 3px solid #8d4d95;
+    border-radius: 10px;
+        font-size: 17px;
+font-weight: 570;
+padding: 0px 8px 0px 8px;
+background-color: #E8D4F4 ;
+}
+</string>
+   </property>
+   <property name="readOnly">
+    <bool>true</bool>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_class">
+   <property name="geometry">
+    <rect>
+     <x>20</x>
+     <y>180</y>
+     <width>61</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QLabel#label_class {
+        font-size: 19px;
+        color: #E8D4F4 ;
+font-weight:700;
+}</string>
+   </property>
+   <property name="text">
+    <string>Class:</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_name">
+   <property name="geometry">
+    <rect>
+     <x>20</x>
+     <y>120</y>
+     <width>71</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QLabel#label_name {
+        font-size: 19px;
+        color: #E8D4F4 ;
+font-weight:700;
+}</string>
+   </property>
+   <property name="text">
+    <string>Name:</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_password">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>220</y>
+     <width>101</width>
+     <height>51</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QLabel#label_password {
+         font-size: 19px;
+        color: #E8D4F4 ;
+font-weight:700;
+}</string>
+   </property>
+   <property name="text">
+    <string> Password:</string>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="lineEditPassword">
+   <property name="geometry">
+    <rect>
+     <x>120</x>
+     <y>230</y>
+     <width>311</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QLineEdit#lineEditPassword {
+      color:#1B0633;
+    border: 3px solid #8d4d95;
+    border-radius: 10px;
+        font-size: 17px;
+font-weight: 570;
+padding: 0px 8px 0px 8px;
+background-color: #E8D4F4 ;
+}
+</string>
+   </property>
+   <property name="echoMode">
+    <enum>QLineEdit::EchoMode::Normal</enum>
+   </property>
+   <property name="readOnly">
+    <bool>true</bool>
+   </property>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
